@@ -1,0 +1,310 @@
+/* Limen Design System */
+:root {
+  --primary-accent: #FFB86A;
+  --secondary-light: #FFE2D4;
+  --secondary-lighter: #EAEFF3;
+  --heading-color: #171717;
+  --body-color: #717171;
+  --white: #FFFFFF;
+  --light-bg: #F9F9F9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--body-color);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: var(--heading-color);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--body-color);
+}
+
+a {
+  color: var(--primary-accent);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Container & Spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header & Navigation */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--secondary-lighter);
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 2rem;
+  color: var(--body-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-accent);
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--white) 0%, var(--secondary-lighter) 100%);
+}
+
+.hero h1 {
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--body-color);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--primary-accent);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-accent);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cta-button:hover {
+  background-color: transparent;
+  color: var(--primary-accent);
+}
+
+/* Section Blocks */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--heading-color);
+}
+
+/* Card System */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-accent);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--heading-color);
+}
+
+.card p {
+  color: var(--body-color);
+}
+
+/* Why/How/When Sections */
+.why, .how, .when {
+  margin: 3rem 0;
+}
+
+.why h2::before {
+  content: '→ ';
+  color: var(--primary-accent);
+}
+
+.how h2::before {
+  content: '→ ';
+  color: var(--primary-accent);
+}
+
+.when h2::before {
+  content: '→ ';
+  color: var(--primary-accent);
+}
+
+.why, .how, .when {
+  background: linear-gradient(90deg, var(--secondary-lighter) 0%, transparent 100%);
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.why ul, .how ul, .when ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.why li, .how li, .when li {
+  padding: 0.5rem 0;
+  color: var(--body-color);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.why li::before, .how li::before, .when li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-accent);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--heading-color);
+  color: var(--white);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: var(--primary-accent);
+}
+
+/* Paul Page Specific */
+.paul-container {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.paul-logo {
+  margin-bottom: 2rem;
+}
+
+.paul-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.paul-image-container {
+  margin: 3rem 0;
+}
+
+.paul-image-container img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.hello-world {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+}
